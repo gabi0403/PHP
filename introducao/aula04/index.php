@@ -1,11 +1,10 @@
 <?php 
-$empresa = "XPTo321";
-$funcionarios = 40;
-
-echo "A " . $empresa . " possui " . $funcionario . " funcionarios";
 
 $funcionarios = 40;
+$mediaEmpresa = $funcionarios >= 39;
 
-echo ($funcionarios > 30?);
+// echo "Empresa de médio porte?";
+// echo $mediaEmpresa;
 
+echo "A empresa é de: " . ($mediaEmpresa? "Medio porte" : "Pequeno porte");
 ?>
