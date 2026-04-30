@@ -1,18 +1,14 @@
-<!-- “Crie uma página que repita informações automaticamente.”
-Requisitos mínimos:
-Uso de for ou while
-Controle correto da repetição
-Pelo menos uma lógica integrada (if)
-Código comentado e organizado
-Sugestões de contexto:
-Lista de funcionários
-Mensagens automáticas
-Relatórios simples -->
+<?php 
+for ($i = 1; $i <= 5; $i++) {
+    echo "Mensagem automática $i<br>"; // mensagem q repete 5 vezes
+}
 
-
-<?php
- 
-
-
-
+//logica integrada:
+for ($i = 1; $i <= 10; $i++) {
+    if ($i % 2 == 0) { // verifica se o número é par
+        echo "$i é par <br>";
+    } else {
+        echo "$i é impar <br>";
+    }
+}
 ?>
