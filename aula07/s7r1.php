@@ -19,7 +19,7 @@
             ["nome"=> "Cabo HDMI", "preco"=> 30.50],
             ]; // array 
 
-            foreach ($produtos as $p){ //uso do foreach
+            foreach ($produtos as $p){ //uso do foreach com array associativo
                 echo  "<tr><td>". $p["nome"] ."</td>" .
                 "<td>" . $p["preco"] . "</td> <tr>";
 
