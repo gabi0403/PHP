@@ -1,27 +1,27 @@
 <?php
-
+// Inicia a sessão para guardar o nome
 session_start();
 
-
-// lógica da sessão: nome do comandante
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'])) {
-    // armazena o nome na sessão com um filtro de limpeza
-    $_SESSION['tripulante'] = htmlspecialchars($_POST['nome']);
+/**
+ * Lógica da Sessão usando isset()
+ */
+if (isset($_POST['nickname'])) {
+    // Salva o nome na sessão apenas se o formulário for enviado
+    $_SESSION['meu_nome'] = htmlspecialchars($_POST['nickname']);
 }
 
-
-//  lógica do cookie será atmosfera da nave
- 
-if (isset($_GET['atmosfera'])) {
-    $modo = $_GET['atmosfera'];
-    setcookie('nave_status', $modo, time() + 3600, "/");
-    
-    // redireciona para evitar reenvio de formulário e atualizar visual
+/**
+ * Lógica do Cookie usando isset()
+ */
+if (isset($_GET['vibe'])) {
+    $vibe = $_GET['vibe'];
+    // Define o cookie para durar 30 dias
+    setcookie('user_vibe', $vibe, time() + (86400 * 30), "/");
+    // Redireciona para limpar a URL
     header("Location: index.php");
     exit;
 }
 
-// define o estado atual baseado no cookie ou padrão "exploração"
-$status_nave = $_COOKIE['nave_status'] ?? 'exploracao';
+// Verifica se existe o cookie de vibe, senão define como 'alegre'
+$vibe_atual = isset($_COOKIE['user_vibe']) ? $_COOKIE['user_vibe'] : "alegre";
 ?>

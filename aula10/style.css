@@ -1,78 +1,60 @@
-:root {
-    --bg-exploracao: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    --bg-alerta: linear-gradient(135deg, #600000 0%, #c31432 100%);
-    --card-glass: rgba(255, 255, 255, 0.1);
-}
+/* Cores baseadas na Vibe */
+body.alegre { --cor: #ffcc00; --bg: #fff9e6; }
+body.zen { --cor: #a2d2ff; --bg: #f0f7ff; }
+body.radical { --cor: #ff5f5f; --bg: #fff0f0; }
 
 body {
-    margin: 0;
-    height: 100vh;
+    background-color: var(--bg);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-family: 'Segoe UI', sans-serif;
-    transition: all 0.5s ease;
-    color: white;
+    padding: 50px;
+    margin: 0;
 }
 
-/* Temas dinâmicos via Cookie */
-body.exploracao { background: var(--bg-exploracao); }
-body.alerta { background: var(--bg-alerta); }
+nav { margin-bottom: 30px; }
+nav a {
+    background: var(--cor);
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 5px;
+    border: 2px solid #000;
+}
 
-.painel-comando {
-    background: var(--card-glass);
-    backdrop-filter: blur(15px);
-    padding: 40px;
+.mural {
+    background: white;
+    border: 4px solid #000;
+    padding: 30px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 380px;
+    box-shadow: 15px 15px 0px var(--cor);
     text-align: center;
-    width: 320px;
 }
 
-h1 { margin-bottom: 5px; font-size: 1.5rem; }
-p { font-size: 0.9rem; opacity: 0.8; }
+h1 { color: #000; border-bottom: 3px double var(--cor); display: inline-block; }
 
 input[type="text"] {
-    width: 100%;
-    padding: 12px;
+    border: 2px solid #000;
+    padding: 10px;
     border-radius: 10px;
-    border: none;
-    margin: 20px 0;
-    background: rgba(255, 255, 255, 0.9);
+    width: 70%;
+    margin: 15px 0;
 }
 
-.btn {
+button {
+    background: #000;
+    color: white;
     padding: 10px 20px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.btn-principal { background: #00d2ff; color: #fff; width: 100%; }
-.btn-status { background: rgba(255,255,255,0.2); color: white; font-size: 0.8rem; margin: 5px; }
-.btn-status:hover { background: rgba(255,255,255,0.4); }
-
-.debug-monitor {
-    margin-top: 30px;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 15px;
     border-radius: 10px;
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    text-align: left;
-    color: #00ff41; /* verde matrix */
+    cursor: pointer;
+    font-family: inherit;
 }
 
-.debug-monitor {
-    opacity: 0; /* Fica invisível */
-    transition: opacity 0.5s;
-}
+.opcoes { margin-top: 30px; }
+.opcoes a { color: #000; font-weight: bold; text-decoration: underline; margin: 0 5px; }
 
-.debug-monitor:hover {
-    opacity: 1; /* Só aparece quando você coloca o mouse em cima */
-}
+/* Rodapé discreto para o requisito do var_dump */
+footer { margin-top: 50px; font-size: 10px; color: #888; }
