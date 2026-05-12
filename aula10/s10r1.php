@@ -1,5 +1,5 @@
 <?php
-
+// OS ARQUIVOS UTILIZADOS SÃO: s10r1 pra lógica, style.css pra estilização e index.php pra página html
 session_start();
 
 
