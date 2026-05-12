@@ -1,4 +1,4 @@
-// OS ARQUIVOS UTILIZADOS SÃO: s10r1 pra lógica, style.css pra estilização e index.php pra página html
+
 <?php 
 // Inclui o arquivo de processamento
 require_once 's10r1.php';

@@ -1,9 +1,7 @@
-<?php
-<<<<<<< HEAD
-// Inicia a sessão para guardar o nome
-=======
 // OS ARQUIVOS UTILIZADOS SÃO: s10r1 pra lógica, style.css pra estilização e index.php pra página html
->>>>>>> c68219a389838059aa021be6427644ee34f8c1ec
+
+<?php
+// Inicia a sessão para guardar o nome
 session_start();
 
 /**
@@ -26,12 +24,7 @@ if (isset($_GET['vibe'])) {
     exit;
 }
 
-<<<<<<< HEAD
+
 // Verifica se existe o cookie de vibe, senão define como 'alegre'
 $vibe_atual = isset($_COOKIE['user_vibe']) ? $_COOKIE['user_vibe'] : "alegre";
 ?>
-=======
-// define o estado atual baseado no cookie ou padrão "exploração"
-$status_nave = $_COOKIE['nave_status'] ?? 'exploracao';
-?>
->>>>>>> c68219a389838059aa021be6427644ee34f8c1ec
