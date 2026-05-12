@@ -17,7 +17,7 @@
             <label for="idade">Idade: </label>
             <input type="number" name="idade" id="idade" required>
             
-            <label for="cpf">CPF na nota?: </label>
+            <label for="cpf">CPF: </label>
             <input type="number" name="cpf" id="cpf" required>
 
             <div class="botoes">

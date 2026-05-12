@@ -1,0 +1,78 @@
+:root {
+    --bg-exploracao: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    --bg-alerta: linear-gradient(135deg, #600000 0%, #c31432 100%);
+    --card-glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.5s ease;
+    color: white;
+}
+
+/* Temas dinâmicos via Cookie */
+body.exploracao { background: var(--bg-exploracao); }
+body.alerta { background: var(--bg-alerta); }
+
+.painel-comando {
+    background: var(--card-glass);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 320px;
+}
+
+h1 { margin-bottom: 5px; font-size: 1.5rem; }
+p { font-size: 0.9rem; opacity: 0.8; }
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-principal { background: #00d2ff; color: #fff; width: 100%; }
+.btn-status { background: rgba(255,255,255,0.2); color: white; font-size: 0.8rem; margin: 5px; }
+.btn-status:hover { background: rgba(255,255,255,0.4); }
+
+.debug-monitor {
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    text-align: left;
+    color: #00ff41; /* verde matrix */
+}
+
+.debug-monitor {
+    opacity: 0; /* Fica invisível */
+    transition: opacity 0.5s;
+}
+
+.debug-monitor:hover {
+    opacity: 1; /* Só aparece quando você coloca o mouse em cima */
+}
