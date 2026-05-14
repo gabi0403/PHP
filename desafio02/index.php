@@ -1,3 +1,20 @@
-<!-- Crie uma aplicação em PHP que faça o sorteio de um numero aleatório usando mt_rand().
-Bonus: Sorteador da mega-sena.
-Sortear 6 numeros e exibir no formato 01-02-03-04-05-06 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteador Mega-Sena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="icon">🍀</div>
+        <h1>Gerador de Sorte</h1>
+        <p>Clique no botão para gerar seus 6 números da sorte para a Mega-Sena.</p>
+        
+        <form action="processa.php" method="POST">
+            <input type="hidden" name="acao" value="sortear">
+            <button type="submit">Gerar Números</button>
+        </form>
+    </div>
+</body>
+</html>

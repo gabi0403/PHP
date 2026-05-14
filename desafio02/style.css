@@ -1,0 +1,70 @@
+:root {
+    --mega-green: #209869;
+    --mega-light: #e8f5e9;
+    --text: #2c3e50;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(32, 152, 105, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    border: 1px solid rgba(32, 152, 105, 0.1);
+}
+
+.icon { font-size: 3rem; margin-bottom: 1rem; }
+
+h1 { color: var(--mega-green); margin-bottom: 10px; }
+
+/* Onde os números aparecem */
+.mega-display {
+    background: var(--mega-light);
+    color: var(--mega-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 25px 0;
+    border: 2px dashed var(--mega-green);
+    letter-spacing: 2px;
+}
+
+button {
+    background: var(--mega-green);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #167a53;
+    transform: scale(1.02);
+}
+
+.btn-voltar {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-voltar:hover { text-decoration: underline; }
