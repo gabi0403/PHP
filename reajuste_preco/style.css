@@ -1,0 +1,94 @@
+:root {
+    --bg-blue: #2d2b50;      /* Azul marinho profundo do fundo */
+    --card-bg: #ffffff;     /* Branco para o card de resultado */
+    --form-bg: #dcdcf0;     /* Lilás claro do fundo do formulário */
+    --accent-green: #5cb85c; /* Verde do botão */
+    --text-purple: #7930cc;  /* Roxo dos títulos */
+}
+
+body {
+    background-color: var(--bg-blue);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1 {
+    color: var(--text-purple);
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.input-container {
+    background-color: var(--form-bg);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="number"], input[type="range"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+}
+
+/* Estilo do Slider (Range) */
+input[type="range"] {
+    cursor: pointer;
+    accent-color: #3b82f6; /* Cor azul da trilha no print */
+}
+
+button {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+.btn-back {
+    background-color: var(--text-purple);
+    margin-top: 20px;
+}
+
+.result-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
